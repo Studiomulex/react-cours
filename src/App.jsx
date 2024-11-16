@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Card from "./components/Card";
 import ShoppingList from "./components/ShoppingList";
+// import Categories from "./components/Categories";
 import "./App.css";
 import { useState } from "react";
 export default function App() {
