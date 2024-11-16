@@ -10,9 +10,9 @@ export default function PlantItem({ id, cover, name, water, light }) {
       <li
         key={id}
         onClick={() => handleClick(name)}
-        className="bg-orange-200 w-[250px]"
+        className="w-[200px]"
       >
-        <img className=" w-full h-[200px]" src={cover} alt={`${name} cover`} />
+        <img className=" w-[200px] h-[200px] rounded-md" src={cover} alt={`${name} cover`} />
         {name}
         <div className="flex gap-1">
           <CareScale careType="water" scaleValue={water} />
