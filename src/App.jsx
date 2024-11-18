@@ -2,9 +2,14 @@ import Banner from "./components/Banner";
 import Card from "./components/Card";
 import ShoppingList from "./components/ShoppingList";
 import "./App.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export default function App() {
-  const [card, updateCard] = useState([]);
+  const savedCart = localStorage.getItem('cart')
+	const [card, updateCard] = useState(savedCart ? JSON.parse(savedCart) : [])
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(card))
+	}, [card])
+ 
   return (
     <div className="h-dvh w-full flex flex-col">
       <Banner />
