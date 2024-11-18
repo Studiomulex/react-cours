@@ -6,9 +6,6 @@ export default function Card({ card, updateCard }) {
     (acc, plantType) => acc + plantType.amount * plantType.price,
     0
   );
-  useEffect(()=>{
-    alert(`J'aurai ${total}€ à payer 💸`)
-  })
   return isOpen ? (
     <div className="bg-green-600 h-dvh w-[40%]">
       <button
